@@ -36,5 +36,14 @@
   },
   "dependencies": {
     "dateformat": "^3.0.3"
-  }
+  },
+  "keywords": [
+    "next",
+    "date",
+    "time",
+    "datetime",
+    "log",
+    "logger",
+    "prefix"
+  ]
 }
