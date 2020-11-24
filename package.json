@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-dt-log",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Datetime log for next.",
   "homepage": "https://github.com/afeiship/next-dt-log",
   "author": {
@@ -34,5 +34,14 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  }
+  },
+  "keywords": [
+    "next",
+    "date",
+    "time",
+    "datetime",
+    "log",
+    "logger",
+    "prefix"
+  ]
 }
