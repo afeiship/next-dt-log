@@ -15,8 +15,8 @@
   "main": "dist/index.js",
   "license": "MIT",
   "devDependencies": {
-    "@feizheng/gulp-pkg-header": "^1.0.4",
-    "@jswork/next": "^1.0.0",
+    "@jswork/gulp-pkg-header": "^1.0.2",
+    "@jswork/next": "^1.0.2",
     "del": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
@@ -28,23 +28,11 @@
     "gulp-uglify": "^3.0.2",
     "jest": "^26.6.3",
     "release-it": "^14.2.1",
-    "uglify-js": "3.11.5",
+    "uglify-js": "3.11.6",
     "uglify-save-license": "^0.4.1"
   },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
-  },
-  "dependencies": {
-    "dateformat": "^3.0.3"
-  },
-  "keywords": [
-    "next",
-    "date",
-    "time",
-    "datetime",
-    "log",
-    "logger",
-    "prefix"
-  ]
+  }
 }

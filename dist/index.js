@@ -2,8 +2,8 @@
  * name: @jswork/next-dt-log
  * description: Datetime log for next.
  * homepage: https://github.com/afeiship/next-dt-log
- * version: 1.0.0
- * date: 2020-11-13T08:14:37.497Z
+ * version: 1.0.1
+ * date: 2020-11-24 15:10:56
  * license: MIT
  */
 
@@ -12,11 +12,15 @@
   var nx = global.nx || require('@jswork/next');
   var dateFormat = require('dateformat');
   var DEFAULT_FORMAT = ['yyyy-mm-dd', 'HH:MM:ss', 'yyyy-mm-dd HH:MM:ss'];
-  var log = console.log;
+  var DEFAULT_OPTIONS = { type: 'log' };
 
   var NxDtLog = nx.declare('nx.DtLog', {
-    statics: {
+    methods: {
+      init: function (inOptions) {
+        this.options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
+      },
       log: function (inArgment, inFmt) {
+        var log = console[this.options.type];
         var args = nx.slice(inArgment);
         var dataStr = '[' + dateFormat(new Date(), inFmt) + ']';
         args.unshift(dataStr);

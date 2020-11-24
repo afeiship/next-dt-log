@@ -22,9 +22,11 @@ npm install -S @jswork/next-dt-log
 ```js
 import NxDtLog from '@jswork/next-dt-log';
 
-NxDtLog.time('i will print current time');
-NxDtLog.date('i will print', 'current', 'date');
-NxDtLog.datetime('i will','print current datetime');
+const logger = new NxDtLog();
+
+logger.time('i will print current time');
+logger.date('i will print', 'current', 'date');
+logger.datetime('i will','print current datetime');
 
 // [16:13:02] i will print current time
 // [2020-11-13] i will print current date
