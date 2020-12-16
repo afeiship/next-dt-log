@@ -43,5 +43,8 @@
     "log",
     "logger",
     "prefix"
-  ]
+  ],
+  "dependencies": {
+    "dateformat": "^4.3.1"
+  }
 }

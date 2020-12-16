@@ -12,11 +12,11 @@ npm install -S @jswork/next-dt-log
 ```
 
 ## apis
-| api      | params | description                  |
-| -------- | ------ | ---------------------------- |
-| date     | msgs   | Print `date` prefix log.     |
-| time     | msgs   | Print `time` prefix log.     |
-| datetime | msgs   | Print `datetime` prefix log. |
+| api  | params | description                  |
+| ---- | ------ | ---------------------------- |
+| date | msgs   | Print `date` prefix log.     |
+| time | msgs   | Print `time` prefix log.     |
+| dt   | msgs   | Print `datetime` prefix log. |
 
 ## usage
 ```js
@@ -26,11 +26,15 @@ const logger = new NxDtLog();
 
 logger.time('i will print current time');
 logger.date('i will print', 'current', 'date');
-logger.datetime('i will','print current datetime');
+logger.dt('i will','print current datetime');
 
 // [16:13:02] i will print current time
 // [2020-11-13] i will print current date
 // [2020-11-13 16:13:02] i will print current datetime
+
+// Or simple to use static properties`log/error/info`:
+NxDtLog.log.dt('i am from datetime logger.');
+NxDtLog.error.dt('i am from datetime error.');
 ```
 
 ## license

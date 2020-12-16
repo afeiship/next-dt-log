@@ -4,6 +4,7 @@
   var dateFormat = require('dateformat');
   var DEFAULT_FORMAT = ['yyyy-mm-dd', 'HH:MM:ss', 'yyyy-mm-dd HH:MM:ss'];
   var DEFAULT_OPTIONS = { type: 'log' };
+  var TYPES = ['log', 'error', 'info'];
 
   var NxDtLog = nx.declare('nx.DtLog', {
     methods: {
@@ -15,14 +16,27 @@
         var args = nx.slice(inArgment);
         var dataStr = '[' + dateFormat(new Date(), inFmt) + ']';
         args.unshift(dataStr);
+        console.log(log, args);
         log.apply(log, args);
       },
-      'date,time,datetime': function (_, index) {
+      'date,time,dt': function (_, index) {
         return function () {
           return this.log(arguments, DEFAULT_FORMAT[index]);
         };
       }
     }
+  });
+
+  // inMember, inTarget, inObject, inIsStatic
+  TYPES.forEach(function (name) {
+    nx.defineProperty(
+      NxDtLog,
+      name,
+      function () {
+        return new NxDtLog({ type: name });
+      },
+      true
+    );
   });
 
   if (typeof module !== 'undefined' && module.exports) {
