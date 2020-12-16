@@ -2,8 +2,8 @@
  * name: @jswork/next-dt-log
  * description: Datetime log for next.
  * homepage: https://github.com/afeiship/next-dt-log
- * version: 1.1.1
- * date: 2020-12-16 17:58:06
+ * version: 1.1.2
+ * date: 2020-12-16 17:58:40
  * license: MIT
  */
 
