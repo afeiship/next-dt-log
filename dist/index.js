@@ -3,7 +3,7 @@
  * description: Datetime log for next.
  * homepage: https://github.com/afeiship/next-dt-log
  * version: 1.1.1
- * date: 2020-12-16 17:56:01
+ * date: 2020-12-16 17:58:06
  * license: MIT
  */
 
@@ -25,7 +25,6 @@
         var args = nx.slice(inArgment);
         var dataStr = '[' + dateFormat(new Date(), inFmt) + ']';
         args.unshift(dataStr);
-        console.log(log, args);
         log.apply(log, args);
       },
       'date,time,dt': function (_, index) {

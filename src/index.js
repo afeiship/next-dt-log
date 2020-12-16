@@ -16,7 +16,6 @@
         var args = nx.slice(inArgment);
         var dataStr = '[' + dateFormat(new Date(), inFmt) + ']';
         args.unshift(dataStr);
-        console.log(log, args);
         log.apply(log, args);
       },
       'date,time,dt': function (_, index) {
