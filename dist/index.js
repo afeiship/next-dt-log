@@ -8,7 +8,7 @@
  */
 
 (function () {
-  var global = global || this || window || Function('return this')();
+  var global = typeof window !== 'undefined' ? window : this || Function('return this')();
   var nx = global.nx || require('@jswork/next');
   var dateFormat = require('dateformat');
   var DEFAULT_FORMAT = ['yyyy-mm-dd', 'HH:MM:ss', 'yyyy-mm-dd HH:MM:ss'];
